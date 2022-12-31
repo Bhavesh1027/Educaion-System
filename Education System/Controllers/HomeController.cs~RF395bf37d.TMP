@@ -1,0 +1,44 @@
+﻿using Education_System.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Education_System.Controllers
+{
+    //[Authorize]
+    public class HomeController : Controller
+    {
+        public async Task<ActionResult> Index()
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            Mymodel CS = new Mymodel();
+            CS.CourseList = db.Courses.ToList();
+            return View(CS);
+            //return View();
+        }
+
+        public ActionResult CourseDetail()
+        {
+
+            return View();
+        }
+        [Authorize(Roles =Role.RoleAdmin)]
+        public ActionResult Adminarea()
+        {
+
+            return View();
+        }
+
+        [Authorize(Roles = Role.RoleUser)]
+        public ActionResult Userarea()
+        {
+
+            return View();
+        }
+       
+    }
+}

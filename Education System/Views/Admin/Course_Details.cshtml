@@ -1,0 +1,122 @@
+﻿@model Education_System.Models.Course
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Course_Details</title>
+</head>
+<body>
+    <div>
+        <h4>Course</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Course_Details)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Course_Details)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Requirements)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Requirements)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Course_Syllabus)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Course_Syllabus)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Credits)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Credits)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Lessons)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Lessons)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.seats)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.seats)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Admin_Course", "Admin")
+    </p>
+</body>
+</html>

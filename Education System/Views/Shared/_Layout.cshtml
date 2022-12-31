@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="StudyPro - Education & Courses HTML5 Template" />
+    <meta name="keywords" content="keyword1,keyword2,keyword3,keyword4,keyword5" />
+    <meta name="author" content="ThemeMascot" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+    <!-- Favicon and Touch Icons -->
+    <!--<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">-->
+    <!-- Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/css-plugin-collections.css" rel="stylesheet" />
+    <!-- CSS | menuzord megamenu skins -->
+    <link href="css/menuzord-megamenu.css" rel="stylesheet" />
+    <link id="menuzord-menu-skins" href="css/menuzord-skins/menuzord-boxed.css" rel="stylesheet" />
+    <!-- CSS | Main style file -->
+    <link href="css/style-main.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Preloader Styles -->
+    <link href="css/preloader.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Custom Margin Padding Collection -->
+    <link href="css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Responsive media queries -->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+    <!-- Revolution Slider 5.x CSS settings -->
+    <link href="js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="js/revolution-slider/css/layers.css" rel="stylesheet" type="text/css" />
+    <link href="js/revolution-slider/css/navigation.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS | Theme Color -->
+    <link href="~/css/colors/theme-skin-color-set1.css" rel="stylesheet" />
+    @*<link href="css/colors/theme-skin-color-set1.css" rel="stylesheet" type="text/css">*@
+
+
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+</head>
+<body>
+    <header id="header" class="header modern-header modern-header-theme-colored">
+        <div class="header-top bg-theme-colored2 sm-text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="widget text-white">
+                            <i class="fa fa-clock-o text-white"></i> Opening Hours:  Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        
+                        <div class="widget">
+                            <ul class="list-inline  text-right flip sm-text-center">
+                                @*<li class="m-0 pl-10"> <a href="#" class="text-white ajaxload-popup"><i class="fa fa-user-o mr-5 text-white"></i> @Html.ActionLink("Login", "Login", "Account") /</a> </li>
+                                <li class="m-0 pl-0 pr-10">
+                                    <a href="#" class="text-white ajaxload-popup"><i class="fa fa-edit mr-5 text-white"></i>@Html.ActionLink("Register", "Regiter", "Account")</a>
+                                </li>*@
+                                @*<li class="m-0 pl-0 pr-10">
+                                    <a href="#" class="text-white ajaxload-popup"><i class="fa fa-edit mr-5 text-white"></i>@Html.ActionLink("MyCourse", "cart", "Home")</a>
+                                </li>*@
+                                @Html.Partial("_LoginPartial")
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle p-0 bg-light xs-text-center">
+            <div class="container pt-20 pb-20">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <div class="widget sm-text-center">
+                            <i class="fa fa-envelope text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+                            <a href="#" class="font-12 text-gray text-uppercase">Mail Us Today</a>
+                            <h5 class="font-13 text-black m-0"> info@Covrize.com</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-6">
+                        <div class="widget text-center">
+                            <a class="" href="index-mp-layout1.html"><img src="images/logo-wide1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <div class="widget sm-text-center">
+                            <i class="fa fa-phone-square text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+                            <a href="#" class="font-12 text-gray text-uppercase">Call us for more details</a>
+                            <h5 class="font-13 text-black m-0"> +(91) 832 001 5052</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="header-nav-wrapper navbar-scrolltofixed">
+                <div class="container">
+                    <nav id="menuzord" class="menuzord green">
+                        <ul class="menuzord-menu onepage-nav">
+                            <li class="active"><a href="#home" >Home</a></li>
+
+                            <li><a href="#courses">Courses</a></li>
+                            <li><a href="#Feedback">Feedback</a></li>
+                           
+                        </ul>
+                        <ul class="pull-right sm-pull-nonelist-inline nav-side-icon-list">
+                            <li>
+                               
+                                @using (Html.BeginForm("search1", "Home", FormMethod.Get))
+
+                                {
+
+
+                                    <form method="post">
+                                        <!-- search box -->
+                                        <div class="aa-search-box">
+
+                                            <input type="text" name="search" id="" placeholder="Search here ex.'CSS'">
+                                            <button type="submit" value="search"><span class="fa fa-search"></span></button>
+
+                                        </div>
+                                        <!-- / search box -->
+                                    </form>
+                                }
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+   
+
+
+    <!-- external javascripts -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- JS | jquery plugin collection for this theme -->
+    <script src="js/jquery-plugin-collection.js"></script>
+    <!-- JS | Custom script for all pages -->
+    <script src="js/custom.js"></script>
+    <script src="js/extra.js"></script>
+
+    <!-- Revolution Slider 5.x SCRIPTS -->
+    <script src="js/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/extra-rev-slider-new.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+          (Load Extensions only on Local File Systems !
+           The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+
+
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+</body>
+
+</html>

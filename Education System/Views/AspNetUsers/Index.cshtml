@@ -1,0 +1,133 @@
+﻿@*@model IEnumerable<Education_System.AspNetUser>*@
+@model PagedList.IPagedList<Education_System.AspNetUser>
+@*@using Education_System.Models.RegisterViewModel;*@
+@using PagedList.Mvc;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    @*<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">*@
+    <script src="~/AdminContent/vendors/scripts/core.js"></script>
+    <link href="~/AdminContent/vendors/styles/icon-font.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">*@
+    @*<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">*@
+    <link href="~/AdminContent/src/plugins/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">*@
+    <link href="~/AdminContent/src/plugins/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">*@
+    <link href="~/AdminContent/vendors/styles/style.css" rel="stylesheet" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+    <link href="~/Content/LoginPage.css" rel="stylesheet" />
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119386393-1');
+    </script>
+</head>
+<body>
+    @Html.Action("Admin_Nav", "Admin")
+    @Html.Action("Sidebar", "Admin")
+    <div class="main-container">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+
+                <!-- Simple Datatable start -->
+                <div class="card-box mb-30">
+                    <div class="pd-20">
+                        <h4 class="text-blue h4">User</h4>
+                        @*<p class="mb-0">you can find more options <a class="text-primary" href="https://datatables.net/" target="_blank">Click Here</a></p>*@
+                    </div>
+                    <div class="pb-20">
+                        <a href="@Url.Action("Registeruser","Account")" class="btn btn-dark btn-theme-colored btn-xl ">Add User</a>
+                        @*@{Html.RenderPartial("Create", new AspNetUser());}*@
+                        <table class="table stripe hover nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="table-plus datatable-nosort">First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Email </th>
+                                    @*<th>Start Date</th>
+                                        <th class="datatable-nosort">Action</th>*@
+                                </tr>
+                            </thead>
+                            @foreach (var item in Model)
+                            {
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @item.Fname
+                                        </td>
+                                        <td>
+                                            @item.Lname
+                                        </td>
+
+                                        <td>
+                                            @item.PhoneNumber
+                                        </td>
+                                        <td>
+                                            @item.Email
+                                        </td>
+                                        @*<td>
+                                                @Html.DisplayFor(modelItem => item.UserName)
+                                            </td>*@
+                                        <td>
+                                            <a href="#" id="show">@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-dark btn-theme-colored btn-xl " })</a>
+                                            @*@Html.ActionLink("Edit", "Edit", new { id = item.Id, @class = "btn btn-dark btn-theme-colored btn-xl " }) |*@
+                                            @*@Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-dark btn-theme-colored btn-xl" }) |*@
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-dark btn-theme-colored btn-xl " })
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            }
+                        </table>
+                        <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                        of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("Index", "AspNetUsers", new { page }))
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/AdminContent/vendors/scripts/core.js"></script>
+    <script src="~/AdminContent/vendors/scripts/process.js"></script>
+    <script src="~/AdminContent/vendors/scripts/script.min.js"></script>
+    <script src="~/AdminContent/vendors/scripts/layout-settings.js"></script>
+    <script src="~/AdminContent/src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/AdminContent/src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/AdminContent/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/AdminContent/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="~/AdminContent/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/AdminContent/vendors/scripts/datatable-setting.js"></script>
+    <script>
+        $("#show").click(function () {
+            $('#myModal').modal('show');
+        });
+        $("#hide").click(function () {
+            $('#myModal').modal('hide');
+
+        });
+    </script>
+    @*<script>
+            $("#show").click(function () {
+                $('#myModal1').modal('show');
+            });
+            $("#hide").click(function () {
+                $('#myModal1').modal('hide');
+
+            });
+        </script>*@
+</body>
+</html>

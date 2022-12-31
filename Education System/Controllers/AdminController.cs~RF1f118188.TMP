@@ -1,0 +1,43 @@
+﻿using Education_System.Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Education_System.Controllers
+{
+    public class AdminController : Controller
+    {
+        private ApplicationDbContext db = new ApplicationDbContext();
+        // GET: Admin
+        public ActionResult Course()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Course(Course course)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                string ImageName =Path.GetFileName(course.ImageFile.FileName);
+                string physicalPath = Server.MapPath("~/Images/Course/" + ImageName);
+                course.ImageFile.SaveAs(physicalPath);
+
+                course.Image = "~/Images/Course/" + ImageName;
+                
+
+                //course.Date = DateTime.Now;
+                //course.UserId = User.Identity.GetUserId();
+                db.Courses.Add(course);
+                db.SaveChanges();
+                return RedirectToAction("Course");
+            }
+
+            return View(course);
+        }
+    }
+}

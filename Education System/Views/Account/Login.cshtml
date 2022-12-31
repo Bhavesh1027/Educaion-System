@@ -1,0 +1,60 @@
+﻿@using Education_System.Models
+@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="~/Content/LoginPage.css" rel="stylesheet" />
+</head>
+
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <div class="wrapper">
+        <div class="logo">
+            @*<img src="https://www.Kfreepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">*@
+        </div>
+        <div class="text-center mt-4 name">
+            Covrize Education
+        </div>
+        <div class="text-center mt-4 name">
+            Login
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<form class="p-3 mt-3">*@
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            @*<input type="text" name="userName" id="userName" placeholder="Username">*@
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "Email or Phone Number" } })
+        </div>
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            @*<input type="password" name="password" id="pwd" placeholder="Password">*@
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "Password", @Type = "Password" } })
+        </div>
+        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        @Html.ValidationMessage("CustomError", "", new { @class = "text-danger" })
+        <button class="btn mt-3">Login</button>
+        @*</form>*@
+        <div class="text-center fs-6">
+            <a href="#">@Html.ActionLink("Forgot account?", "ForgotPassword","Account")</a> or <a href="#"> @Html.ActionLink("Create New Account", "Register", new { @class = "btn btn-success create-account-button" })</a>
+        </div>
+    </div>
+    }
+</body>
+
+</html>

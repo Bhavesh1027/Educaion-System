@@ -1,0 +1,588 @@
+﻿@using Education_System.Models;
+@using System.Linq;
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="StudyPro - Education & Courses HTML5 Template" />
+    <meta name="keywords" content="keyword1,keyword2,keyword3,keyword4,keyword5" />
+    <meta name="author" content="ThemeMascot" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+
+    <!-- Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/css-plugin-collections.css" rel="stylesheet" />
+    <!-- CSS | menuzord megamenu skins -->
+    <link href="css/menuzord-megamenu.css" rel="stylesheet" />
+    <link id="menuzord-menu-skins" href="css/menuzord-skins/menuzord-boxed.css" rel="stylesheet" />
+    <!-- CSS | Main style file -->
+    <link href="css/style-main.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Preloader Styles -->
+    <link href="css/preloader.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Custom Margin Padding Collection -->
+    <link href="css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Responsive media queries -->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+    <!-- Revolution Slider 5.x CSS settings -->
+    <link href="js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="js/revolution-slider/css/layers.css" rel="stylesheet" type="text/css" />
+    <link href="js/revolution-slider/css/navigation.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS | Theme Color -->
+    @*<link href="css/colors/theme-skin-color-set2.css" rel="stylesheet" type="text/css">*@
+    <link href="~/css/colors/theme-skin-color-set1.css" rel="stylesheet" />
+</head>
+<body>
+    <!--<div id="preloader">
+        <div id="spinner">
+            <div class="preloader-dot-loading">
+                <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+            </div>
+        </div>-->
+        @*<div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>*@
+    <!--</div>-->
+
+    <!-- Start main-content -->
+    <div class="main-content">
+
+        <!-- Section: home -->
+        <section id="home" class="divider">
+            <div class="container-fluid p-0">
+
+                <!-- START REVOLUTION SLIDER 5.0.7 -->
+                <div id="rev_slider_home_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery34" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+                    <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+                    <div id="rev_slider_home" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+                        <ul>
+                            <!-- SLIDE 1 -->
+                            <li data-index="rs-1" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/bg/bg12.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
+                                <!-- MAIN IMAGE -->
+                                <img src="images/bg/bg12.jpg" alt="" data-bgposition="top 40%" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0"
+                                     id="slide-1-layer-1"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-width="full"
+                                     data-height="full"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                     data-start="1000"
+                                     data-basealign="slide"
+                                     data-responsive_offset="on"
+                                     style="z-index: 5;background-color:rgba(0, 0, 0, 0.35);border-color:rgba(0, 0, 0, 1.00);">
+                                </div>
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-1-layer-2"
+                                     data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
+                                     data-y="['top','top','top','top']" data-voffset="['120','100','70','90']"
+                                     data-fontsize="['56','46','40','36']"
+                                     data-lineheight="['70','60','50','45']"
+                                     data-fontweight="['800','700','700','700']"
+                                     data-width="['700','650','600','420']"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">
+                                    Take the <span class="text-theme-colored2">world's</span> best <span class="text-theme-colored2">Education</span> Site.
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-1-layer-3"
+                                     data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
+                                     data-y="['top','top','top','top']" data-voffset="['280','220','180','180']"
+                                     data-fontsize="['18','18','16','13']"
+                                     data-lineheight="['30','30','28','25']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-width="['700','650','600','420']"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    We provides always our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                                </div>
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-1-layer-4"
+                                     data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']"
+                                     data-y="['top','top','top','top']" data-voffset="['360','290','260','260']"
+                                     data-fontsize="['18','18','16','16']"
+                                     data-lineheight="['30','30','30','30']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-width="['700','650','600','420']"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    <a href="#" class="btn btn-default btn-theme-colored2 btn-xl">Read More</a> <a href="#" onclick="location.href='/Account/Register'" class="btn btn-dark btn-theme-colored btn-xl">Register</a>
+                                </div>
+                            </li>
+
+                            <!-- SLIDE 2 -->
+                            <li data-index="rs-2" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/bg/bg8.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
+                                <!-- MAIN IMAGE -->
+                                <img src="images/bg/bg8.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0"
+                                     id="slide-2-layer-1"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-width="full"
+                                     data-height="full"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                     data-start="1000"
+                                     data-basealign="slide"
+                                     data-responsive_offset="on"
+                                     style="z-index: 5;background-color:rgba(0, 0, 0, 0.35);border-color:rgba(0, 0, 0, 1.00);">
+                                </div>
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-2-layer-2"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['120','100','70','90']"
+                                     data-fontsize="['28','24','24','24']"
+                                     data-lineheight="['33','30','30','30']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-textalign="['center','center','center','center']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    Online Solution
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-2-layer-3"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['165','135','105','130']"
+                                     data-fontsize="['56','46','40','36']"
+                                     data-lineheight="['70','60','50','45']"
+                                     data-fontweight="['800','700','700','700']"
+                                     data-textalign="['center','center','center','center']"
+                                     data-width="['700','650','600','420']"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">
+                                    Grow Up<span class="text-theme-colored2"> Future</span> Choose <span class="text-theme-colored2">Right</span> Solution.
+                                </div>
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-2-layer-4"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['320','260','220','220']"
+                                     data-fontsize="['18','18','16','13']"
+                                     data-lineheight="['30','30','28','25']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-textalign="['center','center','center','center']"
+                                     data-width="['700','650','600','420']"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    We provides always our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                                </div>
+                                <!-- LAYER NR. 5 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-2-layer-5"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['400','340','300','300']"
+                                     data-fontsize="['18','18','16','16']"
+                                     data-lineheight="['30','30','30','30']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl">Read More</a>
+                                </div>
+                            </li>
+
+                            <!-- SLIDE 3 -->
+                            <li data-index="rs-3" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/bg/bg2.jpg" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
+                                <!-- MAIN IMAGE -->
+                                <img src="images/bg/bg2.jpg" alt="" data-bgposition="top 30%" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <!-- LAYERS -->
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0"
+                                     id="slide-3-layer-1"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-width="full"
+                                     data-height="full"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                     data-start="1000"
+                                     data-basealign="slide"
+                                     data-responsive_offset="on"
+                                     style="z-index: 5;background-color:rgba(0, 0, 0, 0.25);border-color:rgba(0, 0, 0, 1.00);">
+                                </div>
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-3-layer-2"
+                                     data-x="['center','center','center','center']" data-hoffset="['310','200','100','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['120','100','70','90']"
+                                     data-fontsize="['56','46','40','36']"
+                                     data-lineheight="['70','60','50','45']"
+                                     data-fontweight="['800','700','700','700']"
+                                     data-width="['700','650','500','420']"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;">
+                                    We help you <span class="text-theme-colored2">Education</span> to grow and expand
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-3-layer-3"
+                                     data-x="['center','center','center','center']" data-hoffset="['310','200','100','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['280','220','180','180']"
+                                     data-fontsize="['18','18','16','13']"
+                                     data-lineheight="['30','30','28','25']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-width="['700','650','500','420']"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    We provides always our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0"
+                                     id="slide-3-layer-4"
+                                     data-x="['center','center','center','center']" data-hoffset="['310','200','100','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['360','290','260','260']"
+                                     data-fontsize="['18','18','16','16']"
+                                     data-lineheight="['30','30','30','30']"
+                                     data-fontweight="['600','600','600','600']"
+                                     data-width="['700','650','500','420']"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                     data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 7; white-space: nowrap;">
+                                    <a href="#" class="btn btn-dark btn-theme-colored2 btn-xl">Read More</a>
+                                </div>
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption rs-parallaxlevel-0"
+                                     id="slide-3-layer-5"
+                                     data-x="['center','center','center','center']" data-hoffset="['310','33','0','0']"
+                                     data-y="['top','top','top','top']" data-voffset="['360','290','260','260']"
+                                     data-width="['700','650','600','420']"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                                     data-mask_in="x:0px;y:0px;"
+                                     data-mask_out="x:0;y:0;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     data-responsive="off"
+                                     style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer tp-bottom" style="height: 5px; background-color: rgba(166, 216, 236, 1.00);"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: home-boxed -->
+        <section>
+            <div class="container pb-0">
+                <div class="section-content">
+                    <div class="row" data-margin-top="-150px">
+                        <div class="col-md-4">
+                            <div class="icon-box iconbox-border border-theme-colored2 bg-theme-colored text-center p-40 mb-sm-50">
+                                <a class="icon icon-lg icon-top bg-theme-colored2 icon-rounded icon-border-effect effect-rounded" href="#">
+                                    <i class="fa fa-book text-white"></i>
+                                </a>
+                                <h3 class="icon-box-title mt-50 text-white">Online Facilities</h3>
+                                <p class="text-white mb-20">Lorem ipsum dolor sit amet adipisi elit molestias non nulla placeat odio dolor amet  dicta alias.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-box text-center p-40 mb-sm-50 border-2px border-theme-colored2" data-bg-img="images/about/a1.jpg">
+                                <div>
+                                    <span class="typed-text-carousel font-20 text-white" data-speed="50" data-back_delay="600" data-loop="true">
+                                        <span class="">Welcome To StudyPro</span>
+                                        <span class="">Admission for Spring</span>
+                                    </span>
+                                    <h2 class="font-54 text-white">40% Off</h2>
+                                    <a href="@Url.Action("Register","Account")" class="btn btn-default text-theme-colored mt-5 mb-10">Signup Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-box iconbox-border border-theme-colored2 bg-theme-colored text-center p-40 mb-sm-50">
+                                <a class="icon icon-lg icon-top bg-theme-colored2 icon-rounded icon-border-effect effect-rounded" href="#">
+                                    <i class="fa fa-user text-white"></i>
+                                </a>
+                                <h3 class="icon-box-title mt-50 text-white">Expart Teachers</h3>
+                                <p class="text-white mb-20">Lorem ipsum dolor sit amet adipisi elit molestias non nulla placeat odio dolor amet  dicta alias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section: Courses -->
+        <section id="courses" class="bg-silver-light">
+            <div class="container pb-40">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-uppercase line-bottom-double-line-centered mt-0">Popular <span class="text-theme-colored2">Courses</span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem voluptatem obcaecati! <br>ipsum dolor sit Rem autem voluptatem obcaecati</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mtli-row-clearfix">
+                    <div class="owl-carousel-3col">
+                        @foreach (var item in Model.CourseList)
+                        {
+                            <div class="item">
+                                <div class="course-single-item style2 text-center mb-40">
+                                    <div class="course-thumb">
+                                        @*<img class="img-fullwidth" alt="" src="images/course/sm1.jpg">*@
+                                        @if (item.Image != null)
+                                        {
+                                            <img class="img-fullwidth" alt="" src="@Url.Content(item.Image)" height="300" width="100" />
+                                        }
+                                        else
+                                        {
+                                            <img class="img-fullwidth" src="~/Images/default-course-thumbnail.png" />
+                                        }
+                                        @*<img class="img-fullwidth" src="~/Images/default-course-thumbnail.png" />*@
+
+                                        <div class="price-tag">@item.Price INR</div>
+                                    </div>
+                                    <div class="course-details bg-white border-1px clearfix p-15 pt-15">
+                                        <div class="course-top-part">
+                                            <h4 class="line-bottom-centered mt-20">@item.Name</h4>
+                                            <a href="#"><h7>@Html.ActionLink("Click here for Course", "CourseDetail", new { id = item.id })</h7></a>
+
+                                            <ul class="list-inline">
+                                                <li class="review-stars text-theme-colored2">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="author-thumb">
+                                            <img src="images/course/xs1.jpg" alt="" class="img-circle img-thumbnail">
+                                        </div>
+                                        <p class="course-description mt-5">@item.Description</p>
+                                    </div>
+                                    <div class="course-meta bg-theme-colored">
+                                        <ul class="list-inline text-white">
+                                            <li><i class="fa fa-calendar text-theme-colored2 mr-5"></i>@item.Duration hours</li>
+                                            <li><i class="fa fa-book text-theme-colored2 mr-5"></i>@item.Lessons Lessons</li>
+                                            <li><i class="fa fa-clock-o text-theme-colored2 mr-5"></i>@item.seats Seats</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider: testimonials -->
+        <section class="divider layer-overlay overlay-theme-colored-5" data-bg-img="images/bg/team-bg1.png">
+            <div class="container pt-60 pb-60">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="line-bottom-double-line-centered text-white text-center mt-0 mb-0">Feedback From Our Students</h2>
+                        <div class="text-center mb-30"><i class="icon_quotations font-72 text-gray-lightgray"></i></div>
+                        <div class="owl-carousel-1col" data-dots="true">
+                            <div class="item">
+                                <div class="testimonial-wrapper text-center">
+                                    <div class="thumb"><img class="img-thumbnail img-circle" alt="" src="images/testimonials/1.jpg"></div>
+                                    <div class="content pt-10">
+                                        <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsamexpe ita placeat facilis odio illo ex accusantium eaque itaque officiis et sit. Vero quo, impedit neque.consectetur adipisicing elit</p>
+                                        <h4 class="author text-theme-colored2 mb-0">Catherine Grace</h4>
+                                        <h6 class="title text-white mt-0 mb-15">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-wrapper text-center">
+                                    <div class="thumb"><img class="img-thumbnail img-circle" alt="" src="images/testimonials/2.jpg"></div>
+                                    <div class="content pt-10">
+                                        <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsamexpe ita placeat facilis odio illo ex accusantium eaque itaque officiis et sit. Vero quo, impedit neque.consectetur adipisicing elit</p>
+                                        <h4 class="author text-theme-colored2 mb-0">Catherine Grace</h4>
+                                        <h6 class="title text-white mt-0 mb-15">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-wrapper text-center">
+                                    <div class="thumb"><img class="img-thumbnail img-circle" alt="" src="images/testimonials/3.jpg"></div>
+                                    <div class="content pt-10">
+                                        <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque est quasi, quas ipsamexpe ita placeat facilis odio illo ex accusantium eaque itaque officiis et sit. Vero quo, impedit neque.consectetur adipisicing elit</p>
+                                        <h4 class="author text-theme-colored2 mb-0">Catherine Grace</h4>
+                                        <h6 class="title text-white mt-0 mb-15">Designer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- external javascripts -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- JS | jquery plugin collection for this theme -->
+    <script src="js/jquery-plugin-collection.js"></script>
+    <!-- JS | Custom script for all pages -->
+    <script src="js/custom.js"></script>
+    <script src="js/extra.js"></script>
+
+    <!-- Revolution Slider 5.x SCRIPTS -->
+    <script src="js/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/extra-rev-slider-new.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+          (Load Extensions only on Local File Systems !
+           The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+
+</body>
+
+</html>
